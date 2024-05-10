@@ -73,7 +73,10 @@ import {
   CloudsyncBucket,
   CloudsyncCredential,
   CloudsyncCredentialUpdate,
-  CloudsyncCredentialVerify, CloudsyncCredentialVerifyResult,
+  CloudsyncCredentialVerify,
+  CloudsyncCredentialVerifyResult,
+  CloudsyncOneDriveDrive,
+  CloudsyncOneDriveParams,
 } from 'app/interfaces/cloudsync-credential.interface';
 import { CloudsyncProvider, CloudsyncRestoreParams } from 'app/interfaces/cloudsync-provider.interface';
 import { ContainerConfig, ContainerConfigUpdate } from 'app/interfaces/container-config.interface';
@@ -396,6 +399,7 @@ export interface ApiCallDirectory {
   'cloudsync.query': { params: QueryParams<CloudSyncTask>; response: CloudSyncTask[] };
   'cloudsync.restore': { params: CloudsyncRestoreParams; response: void };
   'cloudsync.update': { params: [id: number, task: CloudSyncTaskUpdate]; response: CloudSyncTask };
+  'cloudsync.onedrive_list_drives': { params: [CloudsyncOneDriveParams]; response: CloudsyncOneDriveDrive[] };
 
   // Container
   'container.config': { params: void; response: ContainerConfig };

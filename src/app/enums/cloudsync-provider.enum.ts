@@ -13,12 +13,19 @@ export enum CloudsyncProviderName {
   Hubic = 'HUBIC',
   Mega = 'MEGA',
   MicrosoftAzure = 'AZUREBLOB',
+  MicrosoftOnedrive = 'ONEDRIVE',
   OpenstackSwift = 'OPENSTACK_SWIFT',
   Pcloud = 'PCLOUD',
   Sftp = 'SFTP',
   Storj = 'STORJ_IX',
   Webdav = 'WEBDAV',
   Yandex = 'YANDEX',
+}
+
+export enum OneDriveType {
+  Personal = 'PERSONAL',
+  Business = 'BUSINESS',
+  DocumentLibrary = 'DOCUMENT_LIBRARY',
 }
 
 export const cloudsyncProviderNameMap = new Map<CloudsyncProviderName, string>([
@@ -34,6 +41,7 @@ export const cloudsyncProviderNameMap = new Map<CloudsyncProviderName, string>([
   [CloudsyncProviderName.Http, T('HTTP')],
   [CloudsyncProviderName.Mega, T('Mega')],
   [CloudsyncProviderName.MicrosoftAzure, T('Microsoft Azure')],
+  [CloudsyncProviderName.MicrosoftOnedrive, T('Microsoft OneDrive')],
   [CloudsyncProviderName.OpenstackSwift, T('OpenStack Swift')],
   [CloudsyncProviderName.Pcloud, T('pCloud')],
   [CloudsyncProviderName.Sftp, T('SFTP')],
